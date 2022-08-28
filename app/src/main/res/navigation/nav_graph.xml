@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ProductListFragment">
+
+    <fragment
+        android:id="@+id/ProductListFragment"
+        android:name="com.tuwiq.prodect.fragments.prodectFragment"
+        android:label="Cities and Hotels "
+        tools:layout="@layout/fragment_prodect">
+        <action
+            android:id="@+id/ProductList_To_ProductDetails"
+            app:destination="@id/ProductDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProductDetailsFragment"
+        android:name="com.tuwiq.prodect.fragments.DetailsFragment"
+        android:label="Choose nights">
+        <action
+            android:id="@+id/ProductDetails_To_ProductList"
+            app:destination="@id/ProductListFragment" />
+    </fragment>
+</navigation>

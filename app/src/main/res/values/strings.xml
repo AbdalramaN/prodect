@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">nike</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="nike">nike</string>
+    <string name="speed100">speed100</string>
+    <string name="speed200">speed200</string>
+    <string name="speed300">speed300</string>
+    <string name="speed400">speed400</string>
+    <string name="speed500">speed500</string>
+    <string name="speed600">speed600</string>
+    <string name="speed700">speed700</string>
+    <string name="speed800">speed800</string>
+    <string name="price_title">price each night: </string>
+    <string name="price_total">sub total: %s </string>
+
+    <string name="cancel">cancel</string>
+    <string name="next">Next</string>
+
+
+</resources>

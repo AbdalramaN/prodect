@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:anndroid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sharedviewModel"
+            type="com.tuwiq.prodect.viewModel.SharedViewModel" />
+
+        <variable
+            name="detailsFragment"
+            type="com.tuwiq.prodect.fragments.DetailsFragment" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".fragments.DetailsFragment">
+
+            <ImageView
+
+                android:id="@+id/image_prodect"
+                android:layout_width="match_parent"
+                android:layout_height="199dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/eden_hotel_amsterdam" />
+
+            <TextView
+                android:id="@+id/text_view_name_prodect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:text="@{sharedviewModel.nameHotel}"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                tools:text="name Hotel" />
+
+            <TextView
+                android:id="@+id/text_view_name_prodect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:text="@{sharedviewModel.nameCity}"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                tools:text="name City" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:onClick="@{() -> detailsFragment.goToNextScreen()}"
+                android:text="Next"
+                android:textColor="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:backgroundTint="#AAAAAA"
+                android:onClick="@{() -> detailsFragment.cancelOrder()}"
+                android:text="cancel"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
